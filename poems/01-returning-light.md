@@ -159,6 +159,23 @@ mare lino saku
 息は扉の向こうから戻る。  
 光が水に触れている。
 
+### 表層語彙
+
+| 語 | 意味 |
+|---|---|
+| `mare` | 光 |
+| `lino` | 水、水面 |
+| `saku` | 触れる |
+| `nami` | 名 |
+| `sera` | 手 |
+| `toku` | 眠る、静止している |
+| `vela` | 声 |
+| `nori` | 家 |
+| `mado` | 残る |
+| `hara` | 息 |
+| `dume` | 扉の向こう |
+| `rino` | 戻る |
+
 ### 発声
 
 ```text
@@ -200,3 +217,14 @@ marelinosaku  → mareli / nosaku
 | `merino` | どの身体からでもなく |
 
 アレム語で母音の内部にあった喪失は、ヴェラ語では穏やかな表層詩の背後に隠される。
+
+---
+
+## 使用語彙と辞書
+
+- アレム語語根：`m-r`、`s-l`、`n-l`、`k-t`、`v-l`、`l-m`、`h-r`、`d-r`
+- アレム語関係語：`na`、`vi`、`ra`、`do`、`ve`
+- エン語：本文の11語対を一周して使用
+- ヴェラ語：本文の表層語12語、発声語8語を使用
+
+正規語義は [`../lexicon/arem.md`](../lexicon/arem.md)、[`../lexicon/en.md`](../lexicon/en.md)、[`../lexicon/vela.md`](../lexicon/vela.md) を参照する。

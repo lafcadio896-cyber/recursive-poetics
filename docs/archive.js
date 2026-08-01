@@ -14,7 +14,17 @@ const escapeHtml = (value) =>
 
 const displayFolio = (id) => String(id).replace(/^RP-/, "");
 
+function ensureReaderStyles() {
+  if (document.querySelector('link[href="reader.css"]')) return;
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = "reader.css";
+  document.head.append(link);
+}
+
 async function loadArchive() {
+  ensureReaderStyles();
+
   const container = document.querySelector("#generated-list");
   if (!container) return;
 
@@ -32,21 +42,23 @@ async function loadArchive() {
       .map((entry) => {
         const language = languageNames[entry.source_language] || entry.source_language;
         return `
-          <article class="work-entry archive-entry">
-            <div class="work-folio">
-              <span>${escapeHtml(displayFolio(entry.id))}</span>
-              <span>${escapeHtml(language)}</span>
-            </div>
-            <div class="work-copy">
-              <p class="work-label">${escapeHtml(entry.date)} / 原詩：${escapeHtml(language)}</p>
-              <h3>${escapeHtml(entry.title)}</h3>
-              <p>${escapeHtml(entry.summary)}</p>
-              <a href="${escapeHtml(entry.href)}">三つの詩形を読む</a>
-            </div>
-            <blockquote class="poem-fragment archive-fragment">
-              <p>${escapeHtml(entry.theme)}</p>
-            </blockquote>
-          </article>
+          <a class="work-entry-link" href="${escapeHtml(entry.href)}" aria-label="${escapeHtml(entry.title)}の三つの詩形を読む">
+            <article class="work-entry archive-entry">
+              <div class="work-folio">
+                <span>${escapeHtml(displayFolio(entry.id))}</span>
+                <span>${escapeHtml(language)}</span>
+              </div>
+              <div class="work-copy">
+                <p class="work-label">${escapeHtml(entry.date)} / 原詩：${escapeHtml(language)}</p>
+                <h3>${escapeHtml(entry.title)}</h3>
+                <p>${escapeHtml(entry.summary)}</p>
+                <span class="read-link">三つの詩形を読む</span>
+              </div>
+              <blockquote class="poem-fragment archive-fragment">
+                <p>${escapeHtml(entry.theme)}</p>
+              </blockquote>
+            </article>
+          </a>
         `;
       })
       .join("");

@@ -1,3 +1,4 @@
+# Updating this file triggers one immediate generation.
 name: Generate recursive poem
 
 on:

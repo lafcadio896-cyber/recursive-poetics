@@ -1,0 +1,23 @@
+{
+  "enabled": false,
+  "timezone": "Asia/Tokyo",
+  "schedule": {
+    "frequency": null,
+    "time": null,
+    "cron": null
+  },
+  "output": {
+    "directory": "poems/generated",
+    "create_pull_request": true,
+    "auto_merge": false
+  },
+  "language_selection": {
+    "mode": "rotate",
+    "order": ["arem", "en", "vela"],
+    "maximum_consecutive_same_source": 1
+  },
+  "generation_unit": {
+    "source_poems": 1,
+    "translations_per_source": 2
+  }
+}

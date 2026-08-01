@@ -160,11 +160,59 @@ blockquote {
   line-height: 1.65;
 }
 
-.poem-card a {
+.poem-card a,
+.archive-card a {
   color: var(--ink);
   text-decoration-thickness: 1px;
   text-underline-offset: .35em;
   white-space: nowrap;
+}
+
+.archive-intro {
+  max-width: 48rem;
+  margin: -18px 0 44px 72px;
+  color: var(--muted);
+}
+
+.archive-list {
+  border-top: 1px solid var(--ink);
+}
+
+.archive-card {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 28px;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-card p { margin-top: 0; }
+
+.archive-index,
+.archive-theme,
+.archive-empty {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.archive-index {
+  color: var(--muted);
+  font-size: .76rem;
+  letter-spacing: .08em;
+}
+
+.archive-theme {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.archive-theme::before { content: "THEME / "; }
+
+.archive-empty {
+  margin: 0;
+  padding: 34px 0;
+  color: var(--muted);
 }
 
 .statement > p {
@@ -184,6 +232,8 @@ footer {
   .language-grid { grid-template-columns: 1fr; }
   .language-grid article { min-height: 0; }
   .language-code { margin-bottom: 24px; }
-  .poem-card { grid-template-columns: 1fr; gap: 18px; }
+  .poem-card,
+  .archive-card { grid-template-columns: 1fr; gap: 18px; }
   .section-heading { grid-template-columns: 44px 1fr; }
+  .archive-intro { margin-left: 44px; }
 }

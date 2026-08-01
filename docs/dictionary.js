@@ -28,7 +28,14 @@
       const matchesQuery = !query || searchable.includes(query);
       const matchesFilter = activeFilter === "all" || kind === activeFilter;
       const show = matchesQuery && matchesFilter;
+
       entry.hidden = !show;
+      if (entry.classList.contains("phase-card")) {
+        entry.style.display = show ? "block" : "none";
+      } else {
+        entry.style.removeProperty("display");
+      }
+
       if (show) visible += 1;
     });
 
@@ -42,10 +49,7 @@
     button.addEventListener("click", () => {
       activeFilter = button.dataset.dictionaryFilter || "all";
       filters.forEach((item) =>
-        item.setAttribute(
-          "aria-pressed",
-          String(item === button)
-        )
+        item.setAttribute("aria-pressed", String(item === button))
       );
       update();
     });

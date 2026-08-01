@@ -3,113 +3,176 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="三つの架空言語が互いの詩を誤読し続ける翻訳詩集">
-  <title>recursive poetics</title>
+  <meta name="description" content="三つの架空言語が互いの詩を翻訳し、意味を変形させていく実験詩集">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>recursive poetics — 相互翻訳詩集</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <p class="eyebrow">AN EXPERIMENT IN MUTUAL MISTRANSLATION</p>
-    <h1>recursive<br>poetics</h1>
-    <p class="lead">三つの架空言語が互いの詩を翻訳する。意味は保存されず、それぞれの言語が持つ仕掛けへ変形していく。</p>
+  <a class="skip-link" href="#contents">本文へ移動</a>
+
+  <header class="cover" id="top">
+    <div class="cover-running">A BOOK OF MUTUAL MISTRANSLATION</div>
+    <div class="cover-title">
+      <p class="edition">first cycle / ongoing edition</p>
+      <h1>recursive<br>poetics</h1>
+      <p class="title-ja">相互翻訳詩集</p>
+    </div>
+    <div class="cover-note">
+      <p>三つの架空言語が、互いの詩を翻訳する。</p>
+      <p>意味は保存されず、それぞれの言語が持つ構造へ変形していく。</p>
+    </div>
+    <p class="cover-mark" aria-hidden="true">∴</p>
   </header>
 
-  <main>
-    <section aria-labelledby="languages">
-      <div class="section-heading">
-        <p>01</p>
-        <h2 id="languages">三つの言語</h2>
+  <main id="contents">
+    <section class="book-section preface" aria-labelledby="preface-title">
+      <header class="section-title">
+        <p class="section-number">序</p>
+        <h2 id="preface-title">翻訳について</h2>
+      </header>
+      <div class="prose">
+        <p>ここでの翻訳は、同じ意味を別の語へ置き換える作業ではない。</p>
+        <p>距離を持たない言語は距離を輪へ変え、輪を持たない言語は始点の曖昧さを記憶へ変え、二重の意味を持たない言語は隠された詩を喪失の段階へ展開する。</p>
+        <p class="closing-line">原詩は保存されない。保存できなかったものだけが、翻訳の痕跡として残る。</p>
       </div>
-      <div class="language-grid">
-        <article>
-          <p class="language-code">A</p>
-          <h3>アレム語</h3>
-          <p>子音が概念を保ち、母音が対象との距離を変える。<code>mar</code> は現在の光、<code>mur</code> は届かない光。</p>
-          <p><a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/lexicon/arem.md">語根と母音相を読む</a></p>
+    </section>
+
+    <section class="book-section contents-section" aria-labelledby="languages-title">
+      <header class="section-title">
+        <p class="section-number">I</p>
+        <h2 id="languages-title">三つの言語</h2>
+      </header>
+
+      <div class="language-index">
+        <article class="language-entry">
+          <p class="language-letter">A</p>
+          <div>
+            <h3>アレム語</h3>
+            <p>子音が概念を保ち、母音が対象との距離を変える。<code>mar</code> は現在の光、<code>mur</code> は届かない光。</p>
+          </div>
+          <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/lexicon/arem.md">語根と母音相</a>
         </article>
-        <article>
-          <p class="language-code">E</p>
-          <h3>エン語</h3>
-          <p>単語には意味がなく、隣り合った二語の間にだけ意味が生まれる。始点を変えると因果が変わる。</p>
-          <p><a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/lexicon/en.md">語対辞書を読む</a></p>
+
+        <article class="language-entry">
+          <p class="language-letter">E</p>
+          <div>
+            <h3>エン語</h3>
+            <p>単独の語には意味がなく、隣り合う二語のあいだにだけ意味が生まれる。読む始点によって因果が変わる。</p>
+          </div>
+          <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/lexicon/en.md">語対辞書</a>
         </article>
-        <article>
-          <p class="language-code">V</p>
-          <h3>ヴェラ語</h3>
-          <p>黙読と朗読で語の境界が変わる。紙面上の風景詩を声に出すと、別の詩が現れる。</p>
-          <p><a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/lexicon/vela.md">二つの辞書を読む</a></p>
+
+        <article class="language-entry">
+          <p class="language-letter">V</p>
+          <div>
+            <h3>ヴェラ語</h3>
+            <p>黙読と朗読で語の境界が変わる。紙面上の風景詩を声に出すと、別の詩が現れる。</p>
+          </div>
+          <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/lexicon/vela.md">表層・発声辞書</a>
         </article>
       </div>
     </section>
 
-    <section aria-labelledby="matrix">
-      <div class="section-heading">
-        <p>02</p>
-        <h2 id="matrix">最初の翻訳環</h2>
-      </div>
-      <div class="poem-list">
-        <article class="poem-card">
-          <div>
-            <p class="meta">ORIGINAL: AREM</p>
+    <section class="book-section works-section" aria-labelledby="first-cycle-title">
+      <header class="section-title">
+        <p class="section-number">II</p>
+        <h2 id="first-cycle-title">最初の翻訳環</h2>
+        <p class="section-note">三篇の原詩。九つの詩形。</p>
+      </header>
+
+      <div class="work-index">
+        <article class="work-entry">
+          <div class="work-folio">
+            <span>01</span>
+            <span>AREM</span>
+          </div>
+          <div class="work-copy">
+            <p class="work-label">原詩：アレム語</p>
             <h3>帰光</h3>
             <p>光が現在、記憶、離別、喪失、接近を通過し、再び現在へ戻る。</p>
+            <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/poems/01-returning-light.md">三つの詩形を読む</a>
           </div>
-          <blockquote>
+          <blockquote class="poem-fragment">
             <p>Mar na sal.<br>Mir vi sil.<br>Mor ra sol.<br>Mur vi sul.<br>Mer ve sel.<br>Mar.</p>
           </blockquote>
-          <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/poems/01-returning-light.md">三つの詩形を読む</a>
         </article>
 
-        <article class="poem-card">
-          <div>
-            <p class="meta">ORIGINAL: EN</p>
+        <article class="work-entry">
+          <div class="work-folio">
+            <span>02</span>
+            <span>EN</span>
+          </div>
+          <div class="work-copy">
+            <p class="work-label">原詩：エン語</p>
             <h3>始点のない朝</h3>
             <p>輪のどこを冒頭と見なすかによって、子ども、扉、夜明けの因果が変わる。</p>
+            <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/poems/02-morning-without-origin.md">三つの詩形を読む</a>
           </div>
-          <blockquote>
+          <blockquote class="poem-fragment">
             <p>ka lin mo se ra tu<br>va ni ke su me yo ka</p>
           </blockquote>
-          <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/poems/02-morning-without-origin.md">三つの詩形を読む</a>
         </article>
 
-        <article class="poem-card">
-          <div>
-            <p class="meta">ORIGINAL: VELA</p>
+        <article class="work-entry">
+          <div class="work-folio">
+            <span>03</span>
+            <span>VELA</span>
+          </div>
+          <div class="work-copy">
+            <p class="work-label">原詩：ヴェラ語</p>
             <h3>窓に雨がある</h3>
             <p>黙読すれば雨の朝。声に出せば、顔のない死者たちが戻ってくる。</p>
+            <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/poems/03-rain-at-window.md">三つの詩形を読む</a>
           </div>
-          <blockquote>
+          <blockquote class="poem-fragment">
             <p>nave lori mase<br>mira seno talu<br>sali more navi</p>
           </blockquote>
-          <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/poems/03-rain-at-window.md">三つの詩形を読む</a>
         </article>
       </div>
     </section>
 
-    <section aria-labelledby="archive">
-      <div class="section-heading">
-        <p>03</p>
-        <h2 id="archive">生成記録</h2>
-      </div>
-      <p class="archive-intro">月・水・金の午前3時03分。ChatGPTが既存辞書を読み、原詩言語を順番に交代しながら、一つの原詩と二つの構造的翻訳を追加する。</p>
-      <div id="generated-list" class="archive-list" aria-live="polite">
-        <p class="archive-empty">アーカイブを読み込んでいます。</p>
+    <section class="book-section generated-section" aria-labelledby="generated-title">
+      <header class="section-title">
+        <p class="section-number">III</p>
+        <h2 id="generated-title">連載詩篇</h2>
+        <p class="section-note">月・水・金、午前3時03分。辞書を継承しながら一篇ずつ加わる。</p>
+      </header>
+
+      <div id="generated-list" class="work-index generated-list" aria-live="polite">
+        <p class="archive-empty">目次を開いています。</p>
       </div>
     </section>
 
-    <section class="statement" aria-labelledby="translation">
-      <div class="section-heading">
-        <p>04</p>
-        <h2 id="translation">翻訳について</h2>
-      </div>
-      <p>ここでの翻訳は、同じ意味を別の語へ置き換える作業ではない。距離を持たない言語は距離を輪へ変え、輪を持たない言語は始点の曖昧さを記憶へ変え、二重の意味を持たない言語は隠された詩を喪失の段階へ展開する。</p>
-      <p>原詩は保存されない。何が保存できなかったかだけが、翻訳の痕跡として残る。</p>
+    <section class="book-section appendix" aria-labelledby="appendix-title">
+      <header class="section-title">
+        <p class="section-number">附</p>
+        <h2 id="appendix-title">巻末資料</h2>
+      </header>
+
+      <nav class="appendix-index" aria-label="巻末資料">
+        <a href="https://github.com/lafcadio896-cyber/recursive-poetics/tree/main/languages">
+          <span>言語仕様</span>
+          <small>grammar and poetic constraints</small>
+        </a>
+        <a href="https://github.com/lafcadio896-cyber/recursive-poetics/tree/main/lexicon">
+          <span>語彙集</span>
+          <small>roots, pairs and segmentations</small>
+        </a>
+        <a href="https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/GENERATION.md">
+          <span>生成方針</span>
+          <small>continuity and publication rules</small>
+        </a>
+      </nav>
     </section>
   </main>
 
-  <footer>
-    <p>recursive poetics — generated languages, unstable translations.</p>
+  <footer class="colophon">
+    <p>recursive poetics</p>
+    <p>generated languages, unstable translations.</p>
+    <a href="#top">表紙へ戻る</a>
   </footer>
+
   <script src="archive.js" defer></script>
 </body>
 </html>

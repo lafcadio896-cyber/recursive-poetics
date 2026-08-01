@@ -27,7 +27,7 @@
 - 原詩言語はアレム語 → エン語 → ヴェラ語の順で循環
 - 一回につき原詩1篇と翻訳2篇を生成
 - GitHub Modelsを利用し、追加のAPIキーは不要
-- 生成物はPRとして記録した直後に自動でsquash merge
+- 生成物は `main` に直接コミット
 - 人間によるレビュー、承認、修正は行わない
 
 詳細は [`GENERATION.md`](GENERATION.md)、機械設定は [`config/generation.json`](config/generation.json) にあります。

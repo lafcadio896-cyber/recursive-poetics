@@ -6,11 +6,19 @@
 
 ## 三つの言語
 
-| 言語 | 仕掛け | 仕様 |
-|---|---|---|
-| アレム語 | 子音が概念、母音が距離・存在状態を表す | [`languages/arem.md`](languages/arem.md) |
-| エン語 | 隣接する二語の間にだけ意味が生じる | [`languages/en.md`](languages/en.md) |
-| ヴェラ語 | 黙読と朗読で語の境界と意味が変わる | [`languages/vela.md`](languages/vela.md) |
+| 言語 | 仕掛け | 仕様 | 語彙集 |
+|---|---|---|---|
+| アレム語 | 子音が概念、母音が距離・存在状態を表す | [`languages/arem.md`](languages/arem.md) | [`lexicon/arem.md`](lexicon/arem.md) |
+| エン語 | 隣接する二語の間にだけ意味が生じる | [`languages/en.md`](languages/en.md) | [`lexicon/en.md`](lexicon/en.md) |
+| ヴェラ語 | 黙読と朗読で語の境界と意味が変わる | [`languages/vela.md`](languages/vela.md) | [`lexicon/vela.md`](lexicon/vela.md) |
+
+語彙集の共通運用規則は [`lexicon/README.md`](lexicon/README.md) にあります。新作で使用した新語は、作品と同時に語彙集へ追加します。
+
+## 言語としての状態
+
+三言語は、自然言語のように何でも会話できる完成言語ではなく、詩的機能を中心に設計した人工言語です。
+
+初期作品には辞書確定前の語義衝突があるため、語彙集で正規語彙と旧用法を区別しています。今後の作品では正規語彙を固定し、読者が辞書から自力で翻訳できる状態へ育てます。
 
 ## 最初の翻訳環
 
@@ -22,12 +30,14 @@
 
 ## 自動生成
 
-月曜・水曜・金曜の午前3時03分（Asia/Tokyo）に、一組の相互翻訳詩を生成します。
+ChatGPTのスケジュール機能が、月曜・水曜・金曜の午前3時03分（Asia/Tokyo）に一組の相互翻訳詩を生成します。
 
 - 原詩言語はアレム語 → エン語 → ヴェラ語の順で循環
 - 一回につき原詩1篇と翻訳2篇を生成
-- GitHub Modelsを利用し、追加のAPIキーは不要
-- 生成物は `main` に直接コミット
+- 生成前に言語仕様・語彙集・過去作品・状態ファイルを読む
+- 新語と新規則を語彙集へ追記
+- 語義衝突を検出した場合は公開しない
+- 完成物は `main` に直接反映
 - 人間によるレビュー、承認、修正は行わない
 
 詳細は [`GENERATION.md`](GENERATION.md)、機械設定は [`config/generation.json`](config/generation.json) にあります。

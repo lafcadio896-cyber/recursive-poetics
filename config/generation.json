@@ -14,9 +14,8 @@
   },
   "output": {
     "directory": "poems/generated",
-    "create_pull_request": true,
-    "auto_merge": true,
-    "merge_method": "squash",
+    "integration_mode": "direct_commit",
+    "target_branch": "main",
     "reader_mode": true
   },
   "language_selection": {

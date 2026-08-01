@@ -1,0 +1,84 @@
+name: Generate recursive poem
+
+on:
+  schedule:
+    - cron: "3 3 * * 1,3,5"
+      timezone: "Asia/Tokyo"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  models: read
+
+concurrency:
+  group: recursive-poetics-generation
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate generator
+        run: python -m py_compile scripts/generate_poem.py
+
+      - name: Generate poem cycle
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_poem.py
+
+      - name: Create generation branch
+        id: branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          stamp="$(TZ=Asia/Tokyo date +'%Y%m%d-%H%M%S')"
+          branch="generated/${stamp}"
+          echo "name=${branch}" >> "$GITHUB_OUTPUT"
+          git switch -c "$branch"
+
+      - name: Commit generated work
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "recursive-poetics-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add poems/generated docs/archive.json state/generation-state.json
+          git commit -m "新しい相互翻訳詩を生成"
+          git push --set-upstream origin "${{ steps.branch.outputs.name }}"
+
+      - name: Create and merge pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          title="$(python - <<'PY'
+          import json
+          from pathlib import Path
+          archive = json.loads(Path('docs/archive.json').read_text(encoding='utf-8'))
+          item = archive[0]
+          print(f"{item['id']} {item['title']}を追加")
+          PY
+          )"
+          body_file="$(mktemp)"
+          cat > "$body_file" <<'EOF'
+          ## 自動生成
+
+          三言語のうち一つを原詩として選び、残る二言語への構造的翻訳を生成しました。
+
+          このPRは作品履歴を残すために作成され、レビューを待たず自動でsquash mergeされます。
+          EOF
+          pr_url="$(gh pr create \
+            --base main \
+            --head "${{ steps.branch.outputs.name }}" \
+            --title "$title" \
+            --body-file "$body_file")"
+          gh pr merge "$pr_url" --squash --delete-branch

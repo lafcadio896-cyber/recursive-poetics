@@ -22,12 +22,16 @@
 
 ## 自動生成
 
-生成方針の草案は [`GENERATION.md`](GENERATION.md) にあります。
+月曜・水曜・金曜の午前3時03分（Asia/Tokyo）に、一組の相互翻訳詩を生成します。
 
-設定の差し込み先として [`config/generation.json`](config/generation.json) を用意していますが、現時点では `enabled: false` です。実行頻度と実行時刻は未決定です。
+- 原詩言語はアレム語 → エン語 → ヴェラ語の順で循環
+- 一回につき原詩1篇と翻訳2篇を生成
+- GitHub Modelsを利用し、追加のAPIキーは不要
+- 生成物はPRとして記録した直後に自動でsquash merge
+- 人間によるレビュー、承認、修正は行わない
 
-一回の実行では、原詩一篇と残り二言語への翻訳を生成し、三つの詩形を一組としてPRにします。
+詳細は [`GENERATION.md`](GENERATION.md)、機械設定は [`config/generation.json`](config/generation.json) にあります。
 
 ## Pages
 
-閲覧用ページは [`docs/`](docs/) にあります。GitHub Pagesを有効にする場合は、公開元を `main` ブランチの `/docs` に設定します。
+閲覧用ページは [`docs/`](docs/) にあります。GitHub Pagesの公開元を `main` ブランチの `/docs` に設定すると、初期作品と自動生成アーカイブを閲覧できます。

@@ -1,4 +1,5 @@
 # Updating this file triggers one immediate generation.
+# Bootstrap verification: 2026-08-01
 name: Generate recursive poem
 
 on:

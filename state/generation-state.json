@@ -1,7 +1,13 @@
 {
-  "last_serial": 0,
-  "next_language_index": 0,
-  "recent_themes": [],
-  "recent_titles": [],
-  "new_rules": []
+  "last_serial": 1,
+  "next_language_index": 1,
+  "recent_themes": [
+    "雨の中で鳥が去った後の屋根"
+  ],
+  "recent_titles": [
+    "屋根だけが現在形"
+  ],
+  "new_rules": [
+    "エン語では、欠落読みの中でだけ成立する一時的な語対を許す。ただし通常辞書と区別して記録する。"
+  ]
 }

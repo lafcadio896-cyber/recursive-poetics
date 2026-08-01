@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "RP-0001",
+    "title": "屋根だけが現在形",
+    "date": "2026-08-01",
+    "source_language": "arem",
+    "source_language_name": "アレム語",
+    "summary": "鳥と声だけが別の相へ移り、屋根と雨だけが現在形に残る。",
+    "theme": "雨の中で鳥が去った後の屋根",
+    "href": "https://github.com/lafcadio896-cyber/recursive-poetics/blob/main/poems/generated/RP-0001.md"
+  }
+]

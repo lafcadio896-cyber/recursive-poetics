@@ -1,7 +1,7 @@
-const languageCodes = {
-  arem: "A",
-  en: "E",
-  vela: "V",
+const languageNames = {
+  arem: "AREM",
+  en: "EN",
+  vela: "VELA",
 };
 
 const escapeHtml = (value) =>
@@ -12,6 +12,8 @@ const escapeHtml = (value) =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+const displayFolio = (id) => String(id).replace(/^RP-/, "");
+
 async function loadArchive() {
   const container = document.querySelector("#generated-list");
   if (!container) return;
@@ -19,34 +21,38 @@ async function loadArchive() {
   try {
     const response = await fetch("archive.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`archive request failed: ${response.status}`);
-    const entries = await response.json();
 
+    const entries = await response.json();
     if (!Array.isArray(entries) || entries.length === 0) {
-      container.innerHTML = '<p class="archive-empty">最初の自動生成を待っています。</p>';
+      container.innerHTML = '<p class="archive-empty">最初の連載詩篇を待っています。</p>';
       return;
     }
 
     container.innerHTML = entries
-      .map(
-        (entry) => `
-          <article class="archive-card">
-            <div class="archive-index">${escapeHtml(entry.id)}</div>
-            <div>
-              <p class="meta">${escapeHtml(entry.date)} / ORIGINAL: ${escapeHtml(
-                languageCodes[entry.source_language] || entry.source_language
-              )}</p>
+      .map((entry) => {
+        const language = languageNames[entry.source_language] || entry.source_language;
+        return `
+          <article class="work-entry archive-entry">
+            <div class="work-folio">
+              <span>${escapeHtml(displayFolio(entry.id))}</span>
+              <span>${escapeHtml(language)}</span>
+            </div>
+            <div class="work-copy">
+              <p class="work-label">${escapeHtml(entry.date)} / 原詩：${escapeHtml(language)}</p>
               <h3>${escapeHtml(entry.title)}</h3>
               <p>${escapeHtml(entry.summary)}</p>
-              <p class="archive-theme">${escapeHtml(entry.theme)}</p>
+              <a href="${escapeHtml(entry.href)}">三つの詩形を読む</a>
             </div>
-            <a href="${escapeHtml(entry.href)}">三つの詩形を読む</a>
+            <blockquote class="poem-fragment archive-fragment">
+              <p>${escapeHtml(entry.theme)}</p>
+            </blockquote>
           </article>
-        `
-      )
+        `;
+      })
       .join("");
   } catch (error) {
     console.error(error);
-    container.innerHTML = '<p class="archive-empty">アーカイブを読み込めませんでした。</p>';
+    container.innerHTML = '<p class="archive-empty">連載詩篇の目次を読み込めませんでした。</p>';
   }
 }
 

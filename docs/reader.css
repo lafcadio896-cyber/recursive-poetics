@@ -314,3 +314,60 @@
 .gloss-table th, .gloss-table td { padding: .8rem .6rem; border-bottom: 1px solid var(--line, #d8d4ca); text-align: left; vertical-align: top; }
 .gloss-table th { font-family: var(--mono); font-size: .68rem; letter-spacing: .08em; color: var(--muted); }
 .remember-words { margin-top: 5rem; padding: 2rem 0; border-top: 1px solid var(--ink); }
+/* parallel-poem-v3 */
+.parallel-verse {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  margin: 0;
+  border-top: 1px solid var(--line);
+  font-size: clamp(.88rem, 1.45vw, 1rem);
+}
+.parallel-head {
+  padding: .7rem 0 1rem;
+  color: var(--muted);
+  border-bottom: 1px solid var(--ink);
+  font-family: var(--mono);
+  font-size: .64rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.parallel-head:nth-child(2) { padding-left: 1.5rem; border-left: 1px solid var(--line); }
+.parallel-original,
+.parallel-translation {
+  min-width: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.85;
+}
+.parallel-original {
+  padding-right: 1.5rem;
+  font-family: var(--mono);
+  overflow-wrap: anywhere;
+}
+.parallel-translation {
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--line);
+}
+@media (max-width: 620px) {
+  .parallel-verse { grid-template-columns: 1fr; }
+  .parallel-head { display: none; }
+  .parallel-original {
+    padding: 1.25rem 0 .45rem;
+    border-bottom: 0;
+  }
+  .parallel-original::before,
+  .parallel-translation::before {
+    display: block;
+    margin-bottom: .5rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: .58rem;
+    letter-spacing: .1em;
+  }
+  .parallel-original::before { content: '原詩'; }
+  .parallel-translation::before { content: '逐語訳'; }
+  .parallel-translation {
+    padding: 0 0 1.25rem;
+    border-left: 0;
+  }
+}

@@ -305,3 +305,12 @@
     align-items: flex-start;
   }
 }
+/* reading-format-v2 */
+.reading-guide { margin: 8rem 0 4rem; padding-top: 4rem; border-top: 1px solid var(--ink); }
+.guide-intro, .structure-note { max-width: 46rem; line-height: 1.9; }
+.gloss-language { margin-top: 4rem; }
+.gloss-table { overflow-x: auto; margin: 1.5rem 0; }
+.gloss-table table { width: 100%; border-collapse: collapse; }
+.gloss-table th, .gloss-table td { padding: .8rem .6rem; border-bottom: 1px solid var(--line, #d8d4ca); text-align: left; vertical-align: top; }
+.gloss-table th { font-family: var(--mono); font-size: .68rem; letter-spacing: .08em; color: var(--muted); }
+.remember-words { margin-top: 5rem; padding: 2rem 0; border-top: 1px solid var(--ink); }

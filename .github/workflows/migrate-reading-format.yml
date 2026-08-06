@@ -1,0 +1,34 @@
+name: Migrate reading format
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/migrate_reading_format.py
+      - .github/workflows/migrate-reading-format.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply reading format
+        run: python scripts/migrate_reading_format.py
+      - name: Commit migrated pages
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add GENERATION.md poems/generated/RP-000{1,2,3,4}.md docs/poems/RP-000{1,2,3,4}.html docs/reader.css
+          git commit -m "RP-0001〜RP-0004を逐語訳形式へ移行"
+          git push

@@ -1,0 +1,35 @@
+{
+  "stage": "pre-contact",
+  "enabled": false,
+  "unlock_requires_owner_instruction": true,
+  "cultures": {
+    "arem": {
+      "pragmatic_notes": [],
+      "culture_bound_terms": [],
+      "translation_gaps": [],
+      "contact_knowledge": {}
+    },
+    "en": {
+      "pragmatic_notes": [],
+      "culture_bound_terms": [],
+      "translation_gaps": [],
+      "contact_knowledge": {}
+    },
+    "vela": {
+      "pragmatic_notes": [],
+      "culture_bound_terms": [],
+      "translation_gaps": [],
+      "contact_knowledge": {}
+    }
+  },
+  "contact_events": [],
+  "provisional_glosses": [],
+  "misunderstandings": [],
+  "borrowings": [],
+  "contact_varieties": [],
+  "notes": [
+    "神の視点による相互翻訳は作中話者の知識ではない。",
+    "現段階では接触イベントを生成しない。",
+    "通常作品から判明した文化語用論だけを蓄積する。"
+  ]
+}

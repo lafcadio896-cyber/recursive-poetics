@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "source_of_truth": "LANGUAGE_HISTORY.md",
+  "last_updated_by_poem": "RP-0005",
+  "languages": {
+    "arem": {
+      "candidates": [],
+      "idioms": [],
+      "grammaticalized_forms": [],
+      "sound_changes": []
+    },
+    "en": {
+      "candidates": [],
+      "idioms": [],
+      "grammaticalized_forms": [],
+      "sound_changes": []
+    },
+    "vela": {
+      "candidates": [],
+      "idioms": [],
+      "grammaticalized_forms": [],
+      "sound_changes": []
+    }
+  },
+  "promotion_thresholds": {
+    "innovative_to_repeated": 2,
+    "repeated_to_idiom": 2,
+    "idiom_to_grammar_min_distinct_poems": 3,
+    "allow_sound_reduction_after_stage": "idiom"
+  },
+  "rules": {
+    "do_not_grammaticalize_on_first_use": true,
+    "do_not_reassign_dormant_candidate_meaning": true,
+    "record_etymology_on_promotion": true,
+    "preserve_old_forms": true,
+    "prefer_reusing_matching_candidates": true
+  }
+}

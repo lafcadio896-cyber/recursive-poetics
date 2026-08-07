@@ -14,7 +14,11 @@
     "uses_productive_morphology": true,
     "tracks_language_history": true,
     "language_history_spec": "LANGUAGE_HISTORY.md",
-    "language_history_state": "state/language-history.json"
+    "language_history_state": "state/language-history.json",
+    "tracks_cultural_pragmatics": true,
+    "cultural_contact_spec": "CULTURAL_CONTACT.md",
+    "cultural_contact_state": "state/cultural-contact.json",
+    "cultural_contact_enabled": false
   },
   "output": {
     "directory": "poems/generated",
@@ -52,6 +56,15 @@
       "preserve_etymology": true,
       "preserve_old_forms": true,
       "update_state_with_poem": true
+    },
+    "cultural_pragmatics": {
+      "collect_during_normal_generation": true,
+      "generate_contact_events": false,
+      "record_register_when_relevant": true,
+      "record_cultural_domain_when_relevant": true,
+      "record_translation_gap_when_relevant": true,
+      "record_misreading_risk_when_relevant": true,
+      "do_not_expose_divine_translation_to_speakers": true
     },
     "word_length": {
       "mix_short_medium_long": true,

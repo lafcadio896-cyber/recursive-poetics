@@ -4,8 +4,23 @@
   "unlock_requires_owner_instruction": true,
   "cultures": {
     "arem": {
-      "pragmatic_notes": [],
-      "culture_bound_terms": [],
+      "pragmatic_notes": [
+        {
+          "poem": "RP-0007",
+          "note": "種を表す g-r-n は、植物名としてだけでなく、母音相によって『まだ現れていない生命』を保持できる。現段階では比喩的文法には昇格させない。"
+        }
+      ],
+      "culture_bound_terms": [
+        {
+          "term": "g-r-n",
+          "first_attested": "RP-0007",
+          "register": ["日常語", "詩語"],
+          "cultural_domain": ["大地", "季節", "継承"],
+          "literal_image": "掌に保持され、雨によって芽吹きへ向かう種・穀粒",
+          "translation_gap": "同一語根の母音相だけで、現在・内在・欠如・接近として種の存在状態を分けられる。",
+          "misreading_risk": "他言語では種そのものより、眠り・帰還・記憶などの潜在性へ置き換えられやすい。"
+        }
+      ],
       "translation_gaps": [],
       "contact_knowledge": {}
     },

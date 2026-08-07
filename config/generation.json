@@ -10,7 +10,8 @@
     "provider": "chatgpt",
     "reads_repository_context": true,
     "updates_lexicon": true,
-    "rejects_lexical_conflicts": true
+    "rejects_lexical_conflicts": true,
+    "uses_productive_morphology": true
   },
   "output": {
     "directory": "poems/generated",
@@ -26,6 +27,21 @@
   "generation_unit": {
     "source_poems": 1,
     "translations_per_source": 2,
-    "lexicon_update_required": true
+    "lexicon_update_required": true,
+    "new_lexemes": {
+      "source_language_minimum": 1,
+      "source_language_maximum": 3,
+      "translation_language_minimum": 0,
+      "translation_language_maximum": 3,
+      "prefer_derived_forms": true,
+      "allow_zero_only_when_conflict_risk": true
+    },
+    "word_length": {
+      "mix_short_medium_long": true,
+      "short_characters": [2, 3],
+      "medium_characters": [4, 6],
+      "long_characters": [7, 10],
+      "reject_uniform_length_lines": true
+    }
   }
 }

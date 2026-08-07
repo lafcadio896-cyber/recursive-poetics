@@ -11,7 +11,10 @@
     "reads_repository_context": true,
     "updates_lexicon": true,
     "rejects_lexical_conflicts": true,
-    "uses_productive_morphology": true
+    "uses_productive_morphology": true,
+    "tracks_language_history": true,
+    "language_history_spec": "LANGUAGE_HISTORY.md",
+    "language_history_state": "state/language-history.json"
   },
   "output": {
     "directory": "poems/generated",
@@ -35,6 +38,20 @@
       "translation_language_maximum": 3,
       "prefer_derived_forms": true,
       "allow_zero_only_when_conflict_risk": true
+    },
+    "new_grammar": {
+      "minimum": 0,
+      "maximum": 1,
+      "prefer_historical_development": true,
+      "allow_direct_invention_only_when_no_existing_source_expression": true
+    },
+    "language_change": {
+      "review_candidates_every_generation": true,
+      "prefer_reuse_over_new_candidate": true,
+      "minimum_distinct_poems_for_grammar": 3,
+      "preserve_etymology": true,
+      "preserve_old_forms": true,
+      "update_state_with_poem": true
     },
     "word_length": {
       "mix_short_medium_long": true,

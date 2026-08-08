@@ -1,72 +1,10 @@
 [
-  {
-    "id": "RP-0001",
-    "title": "屋根だけが現在形",
-    "date": "2026-08-01",
-    "source_language": "arem",
-    "source_language_name": "アレム語",
-    "summary": "鳥と声だけが別の相へ移り、屋根と雨だけが現在形に残る。",
-    "theme": "雨の中で鳥が去った後の屋根",
-    "href": "poems/RP-0001.html"
-  },
-  {
-    "id": "RP-0002",
-    "title": "朝のあとで月が沈む",
-    "date": "2026-08-03",
-    "source_language": "en",
-    "source_language_name": "エン語",
-    "summary": "光、水面、月、鳥、雨、家、息、扉が一つの輪を作り、始点によって朝と喪失の因果が変わる。",
-    "theme": "朝が来た後に、家の内部で失われた呼吸が光へ戻る環",
-    "href": "poems/RP-0002.html"
-  },
-  {
-    "id": "RP-0003",
-    "title": "手のひらに残る天気",
-    "date": "2026-08-05",
-    "source_language": "vela",
-    "source_language_name": "ヴェラ語",
-    "summary": "手のひらの名、窓の雨、屋根の光が静かな朝を作り、発声すると鳥の不在を記録していたことが分かる。",
-    "theme": "手のひらに書かれた名と、窓・屋根・雨が鳥の不在を別々に記憶する朝",
-    "href": "poems/RP-0003.html"
-  },
-  {
-    "id": "RP-0004",
-    "title": "閉じた家の外側で",
-    "date": "2026-08-06",
-    "source_language": "arem",
-    "source_language_name": "アレム語",
-    "summary": "光と水は現在へ戻るが、声は家の内部に留まり、呼吸だけが扉へ近づき続ける。",
-    "theme": "閉じた家の内部に残る声と、扉の外側から近づく呼吸",
-    "href": "poems/RP-0004.html"
-  },
-  {
-    "id": "RP-0005",
-    "title": "海が覚える順番",
-    "date": "2026-08-07",
-    "source_language": "en",
-    "source_language_name": "エン語",
-    "summary": "子どもが扉を開くことと、海がその出来事を記憶することの因果が、輪の始点によって入れ替わる。",
-    "theme": "子どもが扉を開くことと、海がその出来事を記憶することの因果が、輪の始点によって入れ替わる",
-    "href": "poems/RP-0005.html"
-  },
-  {
-    "id": "RP-0006",
-    "title": "土の下で朝を待つ",
-    "date": "2026-08-08",
-    "source_language": "vela",
-    "source_language_name": "ヴェラ語",
-    "summary": "月と海のあいだにある土が、発声するとまだ現れていないものを待つ場所へ変わる。",
-    "theme": "月と海のあいだにある土、まだ起きていない朝、そして土の下で待つもの",
-    "href": "poems/RP-0006.html"
-  },
-  {
-    "id": "RP-0007",
-    "title": "雨が種に触れるまで",
-    "date": "2026-08-08",
-    "source_language": "arem",
-    "source_language_name": "アレム語",
-    "summary": "掌の種が内在・欠如・接近を通り、雨と子どもの手に触れられる現在へ戻る。",
-    "theme": "掌に置かれた種が、雨を待つあいだに現在・内在・欠如・接近を通り、最後に子どもの手と雨の接触へ戻る",
-    "href": "poems/RP-0007.html"
-  }
+{"id":"RP-0001","title":"屋根だけが現在形","date":"2026-08-01","source_language":"arem","source_language_name":"アレム語","summary":"鳥と声だけが別の相へ移り、屋根と雨だけが現在形に残る。","theme":"雨の中で鳥が去った後の屋根","href":"poems/RP-0001.html"},
+{"id":"RP-0002","title":"朝のあとで月が沈む","date":"2026-08-03","source_language":"en","source_language_name":"エン語","summary":"光、水面、月、鳥、雨、家、息、扉が一つの輪を作り、始点によって朝と喪失の因果が変わる。","theme":"朝が来た後に、家の内部で失われた呼吸が光へ戻る環","href":"poems/RP-0002.html"},
+{"id":"RP-0003","title":"手のひらに残る天気","date":"2026-08-05","source_language":"vela","source_language_name":"ヴェラ語","summary":"手のひらの名、窓の雨、屋根の光が静かな朝を作り、発声すると鳥の不在を記録していたことが分かる。","theme":"手のひらに書かれた名と、窓・屋根・雨が鳥の不在を別々に記憶する朝","href":"poems/RP-0003.html"},
+{"id":"RP-0004","title":"閉じた家の外側で","date":"2026-08-06","source_language":"arem","source_language_name":"アレム語","summary":"光と水は現在へ戻るが、声は家の内部に留まり、呼吸だけが扉へ近づき続ける。","theme":"閉じた家の内部に残る声と、扉の外側から近づく呼吸","href":"poems/RP-0004.html"},
+{"id":"RP-0005","title":"海が覚える順番","date":"2026-08-07","source_language":"en","source_language_name":"エン語","summary":"子どもが扉を開くことと、海がその出来事を記憶することの因果が、輪の始点によって入れ替わる。","theme":"子どもが扉を開くことと、海がその出来事を記憶することの因果が、輪の始点によって入れ替わる","href":"poems/RP-0005.html"},
+{"id":"RP-0006","title":"土の下で朝を待つ","date":"2026-08-08","source_language":"vela","source_language_name":"ヴェラ語","summary":"月と海のあいだにある土が、発声するとまだ現れていないものを待つ場所へ変わる。","theme":"月と海のあいだにある土、まだ起きていない朝、そして土の下で待つもの","href":"poems/RP-0006.html"},
+{"id":"RP-0007","title":"雨が種に触れるまで","date":"2026-08-08","source_language":"arem","source_language_name":"アレム語","summary":"掌の種が内在・欠如・接近を通り、雨と子どもの手に触れられる現在へ戻る。","theme":"掌に置かれた種が、雨を待つあいだに現在・内在・欠如・接近を通り、最後に子どもの手と雨の接触へ戻る","href":"poems/RP-0007.html"},
+{"id":"RP-0008","title":"石より先に影が渡る","date":"2026-08-09","source_language":"en","source_language_name":"エン語","summary":"海の記憶と子どもの行為の前後が、同じ輪の始点によって反転する。","theme":"出来事より先に記憶があるのか、記憶は出来事の後に生まれるのかを、海・子ども・夜明け・鳥・月の輪で読む","href":"poems/RP-0008.html"}
 ]

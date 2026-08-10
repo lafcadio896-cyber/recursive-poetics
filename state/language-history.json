@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_of_truth": "LANGUAGE_HISTORY.md",
-  "last_updated_by_poem": "RP-0007",
+  "last_updated_by_poem": "RP-0010",
   "languages": {
     "arem": {
       "candidates": [],

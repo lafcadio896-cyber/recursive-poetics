@@ -1,26 +1,11 @@
 {
   "schema_version": 1,
   "source_of_truth": "LANGUAGE_HISTORY.md",
-  "last_updated_by_poem": "RP-0011",
+  "last_updated_by_poem": "RP-0013",
   "languages": {
-    "arem": {
-      "candidates": [],
-      "idioms": [],
-      "grammaticalized_forms": [],
-      "sound_changes": []
-    },
-    "en": {
-      "candidates": [],
-      "idioms": [],
-      "grammaticalized_forms": [],
-      "sound_changes": []
-    },
-    "vela": {
-      "candidates": [],
-      "idioms": [],
-      "grammaticalized_forms": [],
-      "sound_changes": []
-    }
+    "arem": {"candidates": [], "idioms": [], "grammaticalized_forms": [], "sound_changes": []},
+    "en": {"candidates": [], "idioms": [], "grammaticalized_forms": [], "sound_changes": []},
+    "vela": {"candidates": [], "idioms": [], "grammaticalized_forms": [], "sound_changes": []}
   },
   "promotion_thresholds": {
     "innovative_to_repeated": 2,

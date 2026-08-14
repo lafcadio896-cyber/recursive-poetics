@@ -1,17 +1,49 @@
 {
   "schema_version": 1,
   "source_of_truth": "LANGUAGE_HISTORY.md",
-  "last_updated_by_poem": "RP-0013",
+  "last_updated_by_poem": "RP-0014",
   "languages": {
     "arem": {
-      "candidates": [{"form":"do","stage":"innovative","usage_count":1,"first_attested":"RP-0013","attestations":["RP-0013"]}],
+      "candidates": [
+        {
+          "form": "do",
+          "stage": "repeated",
+          "usage_count": 2,
+          "first_attested": "RP-0013",
+          "attestations": ["RP-0013", "RP-0014"],
+          "source_meaning": "X が Y の後ろに残る",
+          "innovative_direction": "Y という状態・出来事が終わった後、その結果として X が残る",
+          "notes": "二つの独立作品で同方向に再使用。慣用化・結果相への昇格はまだ行わない。"
+        }
+      ],
       "idioms": [],
       "grammaticalized_forms": [],
       "sound_changes": []
     },
-    "en": {"candidates": [], "idioms": [], "grammaticalized_forms": [], "sound_changes": []},
-    "vela": {"candidates": [], "idioms": [], "grammaticalized_forms": [], "sound_changes": []}
+    "en": {
+      "candidates": [],
+      "idioms": [],
+      "grammaticalized_forms": [],
+      "sound_changes": []
+    },
+    "vela": {
+      "candidates": [],
+      "idioms": [],
+      "grammaticalized_forms": [],
+      "sound_changes": []
+    }
   },
-  "promotion_thresholds": {"innovative_to_repeated":2,"repeated_to_idiom":2,"idiom_to_grammar_min_distinct_poems":3,"allow_sound_reduction_after_stage":"idiom"},
-  "rules": {"do_not_grammaticalize_on_first_use":true,"do_not_reassign_dormant_candidate_meaning":true,"record_etymology_on_promotion":true,"preserve_old_forms":true,"prefer_reusing_matching_candidates":true}
+  "promotion_thresholds": {
+    "innovative_to_repeated": 2,
+    "repeated_to_idiom": 2,
+    "idiom_to_grammar_min_distinct_poems": 3,
+    "allow_sound_reduction_after_stage": "idiom"
+  },
+  "rules": {
+    "do_not_grammaticalize_on_first_use": true,
+    "do_not_reassign_dormant_candidate_meaning": true,
+    "record_etymology_on_promotion": true,
+    "preserve_old_forms": true,
+    "prefer_reusing_matching_candidates": true
+  }
 }

@@ -41,13 +41,31 @@
       "translation_language_minimum": 0,
       "translation_language_maximum": 3,
       "prefer_derived_forms": true,
-      "allow_zero_only_when_conflict_risk": true
+      "allow_zero_only_when_conflict_risk": true,
+      "prefer_conceptual_lexemes_over_object_labels": true,
+      "require_semantic_necessity": true
     },
     "new_grammar": {
       "minimum": 0,
       "maximum": 1,
       "prefer_historical_development": true,
       "allow_direct_invention_only_when_no_existing_source_expression": true
+    },
+    "poetic_quality": {
+      "enabled": true,
+      "create_japanese_emotional_core_before_conlang_realization": true,
+      "require_memorable_image_or_line": true,
+      "reject_safe_recombination_only": true,
+      "avoid_recent_image_clusters": ["rain-moon-bird-dawn-memory-absence"],
+      "expand_universal_domains": ["body", "kinship", "love", "grief", "aging", "birth", "death", "labor", "hunger", "sleep", "journey", "separation", "return", "land", "season", "ritual"],
+      "modern_urban_scenes_deferred": true,
+      "prefer_language_specific_emotional_transformation": true,
+      "self_review_before_publish": {
+        "japanese_translation_stands_as_poem": true,
+        "contains_new_semantic_discovery": true,
+        "new_lexeme_is_worth_learning": true,
+        "not_dominated_by_recent_motifs": true
+      }
     },
     "language_change": {
       "review_candidates_every_generation": true,

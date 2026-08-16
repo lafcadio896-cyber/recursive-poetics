@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "source_of_truth": "LANGUAGE_HISTORY.md",
-  "last_updated_by_poem": "RP-0015",
+  "last_updated_by_poem": "RP-0016",
   "languages": {
     "arem": {
-      "candidates": [
+      "candidates": [],
+      "idioms": [
         {
-          "form": "do",
-          "stage": "repeated",
-          "usage_count": 2,
+          "form": "X do Y",
+          "stage": "idiom",
+          "usage_count": 3,
           "first_attested": "RP-0013",
-          "attestations": ["RP-0013", "RP-0014"],
+          "attestations": ["RP-0013", "RP-0014", "RP-0016"],
           "source_meaning": "X が Y の後ろに残る",
-          "innovative_direction": "Y という状態・出来事が終わった後、その結果として X が残る",
-          "notes": "二つの独立作品で同方向に再使用。慣用化・結果相への昇格はまだ行わない。"
+          "idiomatic_meaning": "Y という状態・出来事が終わった後、その結果として X が残る",
+          "notes": "異なる三作品で同方向に使用され、慣用化。正規の空間義は保持する。結果相などの文法素にはまだ昇格しない。"
         }
       ],
-      "idioms": [],
       "grammaticalized_forms": [],
       "sound_changes": []
     },
